@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kodbank - Banking Application</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" href="https://yt3.googleusercontent.com/HiUBuWFlR3mAV7syogp0rakopxCP8ACn6fXO_f-muIVNcnPNOpbmP1QSs2hJBupcZzZxdMIL=s900-c-k-c0x00ffffff-no-rj">
+</head>
+<body>
+    <!-- Login Container -->
+    <div class="container" id="loginContainer">
+        <div class="header">
+            <img src="https://yt3.googleusercontent.com/HiUBuWFlR3mAV7syogp0rakopxCP8ACn6fXO_f-muIVNcnPNOpbmP1QSs2hJBupcZzZxdMIL=s900-c-k-c0x00ffffff-no-rj" alt="KodNest Logo" class="logo">
+            <h1>Kodbank</h1>
+            <p>Powered by KodNest</p>
+            <p>Welcome back! Please login to your account</p>
+        </div>
+        <div class="form-container">
+            <div id="messageBox" class="message"></div>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginUsername">Username</label>
+                    <input type="text" id="loginUsername" placeholder="Enter your username" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+            
+            <div class="switch-link">
+                Don't have an account? <a href="#" onclick="showRegister()">Register here</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Container -->
+    <div class="container hidden" id="registerContainer">
+        <div class="header">
+            <img src="https://yt3.googleusercontent.com/HiUBuWFlR3mAV7syogp0rakopxCP8ACn6fXO_f-muIVNcnPNOpbmP1QSs2hJBupcZzZxdMIL=s900-c-k-c0x00ffffff-no-rj" alt="KodNest Logo" class="logo">
+            <h1>Kodbank</h1>
+            <p>Powered by KodNest</p>
+            <p>Create your account</p>
+        </div>
+        <div class="form-container">
+            <div id="messageBox" class="message"></div>
+            
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="regUid">User ID</label>
+                    <input type="text" id="regUid" placeholder="Enter your user ID" required>
+                </div>
+                <div class="form-group">
+                    <label for="regUsername">Username</label>
+                    <input type="text" id="regUsername" placeholder="Enter your username" required>
+                </div>
+                <div class="form-group">
+                    <label for="regEmail">Email</label>
+                    <input type="email" id="regEmail" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPhone">Phone Number</label>
+                    <input type="tel" id="regPhone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPassword">Password</label>
+                    <input type="password" id="regPassword" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn">Register</button>
+            </form>
+            
+            <div class="switch-link">
+                Already have an account? <a href="#" onclick="showLogin()">Login here</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard Container -->
+    <div class="dashboard-container hidden" id="dashboardContainer">
+        <div class="dashboard-header">
+            <div class="header-logo">
+                <img src="https://yt3.googleusercontent.com/HiUBuWFlR3mAV7syogp0rakopxCP8ACn6fXO_f-muIVNcnPNOpbmP1QSs2hJBupcZzZxdMIL=s900-c-k-c0x00ffffff-no-rj" alt="KodNest Logo" class="logo-small">
+            </div>
+            <h2>Kodbank Dashboard</h2>
+            <div class="user-info" id="userInfo"></div>
+        </div>
+        
+        <div class="dashboard-content">
+            <div class="balance-card">
+                <h3>Your Current Balance</h3>
+                <div class="amount" id="balanceDisplay">₹ ---</div>
+            </div>
+            
+            <button id="checkBalanceBtn" class="btn">Check Balance</button>
+            <button id="logoutBtn" class="btn btn-logout">Logout</button>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
